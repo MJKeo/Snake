@@ -142,7 +142,7 @@ function endGame() {
     console.log("ended");
     clearInterval(drawInterval);
     ctx.fillStyle = "white";
-    ctx.fillRect(canvas.width / 5, canvas.height / 5, 3 * canvas.width / 5, 3 * canvas.height / 5);
+    ctx.fillRect(canvas.width / 5, canvas.height / 4, 3 * canvas.width / 5, 3 * canvas.height / 6);
     ctx.fillStyle = "black";
     ctx.font = "40px Arial";
     ctx.fillText("GAME OVER", canvas.width / 4, 1.4 * canvas.height / 3);
