@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>snake</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <nav id="NAve" class="navbar sticky-top navbar-expand-lg border-bottom">
+            <a class="navbar-brand" href="#"><h1 id="white" class="display-5 font-weight-bolder">GAMES.io</h1></a>
+            <form class="form-inline my-2 my-lg-0 p-2">
+                    <a class="nav-link pl-5" href="#"><h3 id="white" class="text-white-50 font-weight-bolder">Snake</h1></a>
+                    <a class="nav-link pl-5" href="#"><h3 id="white" class="text-white-50 font-weight-bolder">Game 2</h1></a>
+                    <a class="nav-link pl-5" href="#"><h3 id="white" class="text-white-50 font-weight-bolder">Game 3</h1></a>
+            </form>
+        </nav>
+
+        <div class="container-fluid text-center">
+            <div id="spacing"></div>
+            <div class="container">
+                <h1 id="white" class="display-4 font-weight-bolder">SNAKE</h1>
+            </div>
+            <div id="spacing"></div>
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm text-white">
+                            <div id="largeSpacing"></div>
+                            <h1 class="display-5">Controls / Rules</h1>
+                            <ul>
+                                <li>Move with the arrow keys</li>
+                                <li>Collect the blue coins</li>
+                                <li>Dont touch the edges or your tail</li>
+                                <li>When the game ends press enter to restart</li>
+                            </ul>
+                        </div>
+                        <div id="canvasContainer" class="col-5">
+                            <canvas id="myCanvas" class="img-thumbnail shadow-lg rounded" height="500" width="500"></canvas>
+                        </div>
+                        <div class="col-sm text-center text-white">
+                            <div id="largeSpacing"></div>
+                            <h1 class="display-5">Current Score</h1>
+                            <h1 id="currentScoreLabel">0</h1>
+                            <div id="spacing"></div>
+                            <h1 class="display-5">Best Score</h1>
+                            <h1 id="bestScoreLabel">0</h1>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <script src="snake.js"></script>
+    </body>
+</html>

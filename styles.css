@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+}
+
+#white {
+    color: white;
+    
+}
+
+#NAve {
+    background-image: url("images/background.png");
+    height: 75px;
+}
+
+#backgroundDiv {
+    height: 90%;
+    background-color: white;
+    
+}
+
+#spacing {
+    height: 25px;
+}
+
+#largeSpacing {
+    height: 100px;
+}
+
+#myCanvas {
+    height: 500px;
+    width: 500px;
+    background-color: #650101;
+}
+
+#canvasContainer {
+    width: 600px;
+}
