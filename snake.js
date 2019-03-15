@@ -3,6 +3,7 @@ var ctx = canvas.getContext("2d");
 
 var score = 0;
 var ended = false;
+var buffer = 0;
 
 var tail = []
 var player = {x: 240, y: 240, length: 10, width: 10, color: "yellow", direction: "none", move: function() {
@@ -47,6 +48,9 @@ var drawInterval = setInterval(draw, 60)
 
 // function to draw the player and its tail
 function drawPlayer() {
+    if (buffer > 0) {
+        buffer--;
+    }
     ctx.fillStyle = player.color;
     ctx.fillRect(player.x, player.y, player.length, player.width);
 }
@@ -199,13 +203,17 @@ function restartGame() {
 }
 
 function keyDownHandler(e) {
-    if(e.key == "ArrowLeft" && player.direction != "right") {
+    if(e.key == "ArrowLeft" && player.direction != "right" && buffer == 0) {
+        buffer = 1;
         player.direction = "left";
-    } else if(e.key == "ArrowRight" && player.direction != "left") {
+    } else if(e.key == "ArrowRight" && player.direction != "left" && buffer == 0) {
+        buffer = 1;
         player.direction = "right";
-    } else if(e.key == "ArrowUp" && player.direction != "down") {
+    } else if(e.key == "ArrowUp" && player.direction != "down" && buffer == 0) {
+        buffer = 1;
         player.direction = "up";
-    } else if(e.key == "ArrowDown" && player.direction != "up") {
+    } else if(e.key == "ArrowDown" && player.direction != "up" && buffer == 0) {
+        buffer = 1;
         player.direction = "down";
     } else if (e.key == "Enter" && ended) {
         restartGame();
